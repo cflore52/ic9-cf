@@ -21,7 +21,7 @@ chocolates = [
     {
         "name": "Cream Chocolate",
         "image": "https://m.media-amazon.com/images/I/61-pg5u+9pL.jpg",
-        "price": 6.49
+        "price": 15.49
     },
     {
         "name": "White Chocolate",
@@ -33,6 +33,10 @@ chocolates = [
 @app.route('/chocolates', methods=['GET'])
 def get_chocolates():
     return jsonify(chocolates)
+
+@app.route('/seconddeveloperchanges', methods=['GET'])
+def second_dev():
+    return "Hello, it is second dev"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80)
